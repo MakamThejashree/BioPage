@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+       <h2 id="page-header">
+       <img src="image/profile.jpeg" alt="Profile pic">
+       Thejashree | Portfolio
+       </h2>
+       <nav id="main-navigation">
+           <img src="image/contactMe.png" onclick="contactMe()">
+           <img src="image/LinkedIn.jpg" onclick="MyLinkedInProfile()">
+<!--           <button class="open-button" onclick="contactMe()">Contact me</button>-->
+       </nav>
+    </header>
+    <!-- Main section -->
+    <div id="page-main">
+        <!-- hero -->
+        <div class="hero">
+        <div class="hero-content" id="home">
+          <div >
+              <img  class="hero-image" src="image/myProfile.jpg">
+          </div>
+           
+            <h6 class="hero-title">
+             Welcome!! All about me!! 
+            </h6>
+            <div class="text-decor">
+            <ul>
+              <li><a href="#aboutme">About me</a></li>
+               <li><a href="#myWork">Where did I work?</a></li>
+               <li><a href="#Volunteer">How am I a volunteer?</a></li>
+               <li><a href="#Instructor">Math? That's easy!!</a></li>
+           </ul> 
+            </div>
+                      
+        </div>   
+        </div>
+        <div id="aboutme" class="section-header about">
+            <a href="#home">Go back to home</a>
+            <h2>Hi, I'm Shree!!</h2>
+            <p>I'm a passionate front-end developer who believe in digitalizing products for the people with a simple content structure. Also, being a magician for children and a clown from the team Humanitarian Clowns Bangalore draws me a satisfaction of giving back a little part and time to the society. Lastly I am a math tutor, believe me I'm not strict on your calculations!!
+            </p>
+        </div>
+        <div class="container is-narrow">
+            <div class="box">
+               <div class="content">
+                   <div class="columns is-centered">
+                   <div style="display:flex;flex-direction:row;">
+                   <a href="#home">Go back to home</a>
+                    <div class="column" id="myWork">
+                         <figure class="image">
+                           <img class="is-skill-icon" src="image/coding.png"/>
+                       </figure> 
+                       <h4>Designer</h4>
+                       <p>
+                           I love beautifying the web pages and increasing the ease of use for customers through my web developement!
+                       </p>
+                       <p class="has-text-primary has-text-weight-normal">Front-End technologies:</p>
+                       <ul>
+                           <li>Angular 4</li>
+                           <li>JavaScript</li>
+                           <li>TypeScript</li>
+                       </ul>
+                       <p class="has-text-primary has-text-weight-normal">Back-End technologies:</p>
+                       <ul>
+                           <li>C#</li>
+                           <li>Asp.Net WebAPI</li>
+                       </ul>
+                         
+                    </div>
+                      <div class="column column-2" id="Volunteer">
+                        <figure class="image">
+                           <img class="is-skill-icon" src="image/volunteer.png"/>
+                       </figure> 
+                       <h4>Volunteer</h4>
+                       <p>
+                           Start Giving!! Enjoy the joy of giving!
+                           Volunteering is a token of giving back to society for it's well being:)
+                       </p>
+                       <p class="has-text-primary has-text-weight-normal">Teams:</p>
+                       <ul>
+                           <li>VFC- Volunteer For a Cause</li>
+                           <li>Humanitarian Clowns Bengaluru</li>
+                           <li>SevaCafe</li>
+                       </ul>
+                       <p class="has-text-primary has-text-weight-normal">Roles:</p>
+                       <ul>
+                           <li>Planner</li>
+                           <li>Organiser</li>
+                           <li>Event coordinator</li>
+                       </ul>
+                      </div>
+                      <div class="column column-3" id="Instructor">
+                         <figure class="image">
+                           <img class="is-skill-icon" src="image/instructor.png"/>
+                       </figure> 
+                       <h4>Instructor</h4>
+                       <p>
+                           Brainstorming and thinking out of the box is super exciting:D
+                           Math is easy when you play with the numbers!
+                       </p>
+                       <p class="has-text-primary has-text-weight-normal">Syllabus covered:</p>
+                       <ul>
+                           <li>Algebra</li>
+                           <li>Geometry</li>
+                           <li>Arithemetic</li>
+                       </ul>
+                       <p class="has-text-primary has-text-weight-normal">Grades:</p>
+                       <ul>
+                           <li>Grade 1- Grade 10 || State</li>
+                           <li>Grade 1- Grade 10 || CBSCE</li>
+                           <li>Grade 1- Grade 8 || ICSCE</li>
+                       </ul>
+                      </div>  
+                       </div>     
+                   </div>
+               </div>
+            </div>
+        </div> 
+<div class="form-popup" id="myContactForm">
+  <form class="form-container">
+        <h1>Thanks for reaching out to me!!</h1>
+
+    <label id="Name"><b>Name</b></label>
+    <input type="name" placeholder="" name="Name" Id="ContactName" required>
+
+    <label id="Email"><b>Email Address</b></label>
+    <input type="email" placeholder="" class="is-large" name="EmailAddress" Id="ContactEmailId" required>
+    
+    <label id="Message"><b>Message</b></label>
+    <textarea placeholder="" class="textarea is-large" name="message" rows="5" required></textarea>
+    
+    <button type="button" class="btn" onclick="ContactSubmit()">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+    <script>
+        function contactMe(){
+            document.getElementById("myContactForm").style.display="block";
+        }
+        function closeForm() {
+            document.getElementById("myContactForm").style.display = "none";
+        }
+        function ContactSubmit(){
+            document.getElementById("myContactForm").style.display = "none";
+            var name = document.getElementById('ContactName').value;
+            var Email = document.getElementById('ContactEmailId').value;
+            alert("Hi" + name +", I will surely contact you on your"+ Email +"!!");
+        }
+        function MyLinkedInProfile(){
+            window.open('https://www.linkedin.com/in/thejashreemakam/', '_blank');
+        }
+    </script>
+    <footer id="footer">
+        <img src="image/profile.jpeg" alt="">
+        <span>My portfolio<br/>&copy; 2020</span>
+    </footer>
+    
+</body>
+</html>
